@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Herbier du Temps — Myriam Grandemange</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --violet-bg: #5D2E5D;
+            --violet-card: #7A3F7A;
+            --violet-light: #9B569B;
+            --mauve-accent: #E1AEE1;
+            --text-white: #FFFFFF;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--violet-bg);
+            color: var(--text-white);
+            margin: 0;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .animate-reveal {
+            animation: reveal 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            opacity: 0;
+        }
+        
+        @keyframes reveal {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .btn-purple {
+            background-color: var(--mauve-accent);
+            color: var(--violet-bg);
+            transition: all 0.3s ease;
+            font-weight: 800;
+        }
+        .btn-purple:hover {
+            background-color: #FFFFFF;
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .card-violet {
+            background-color: var(--violet-card);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        input, textarea {
+            color: white !important;
+            background-color: rgba(0,0,0,0.3) !important;
+            border: 1px solid rgba(255,255,255,0.2) !important;
+        }
+        input:focus, textarea:focus {
+            border-color: var(--mauve-accent) !important;
+            background-color: rgba(0,0,0,0.4) !important;
+            outline: none;
+        }
+        ::placeholder {
+            color: rgba(255,255,255,0.4) !important;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--violet-bg); }
+        ::-webkit-scrollbar-thumb { background: var(--mauve-accent); border-radius: 10px; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.460.0?deps=react@19.0.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
